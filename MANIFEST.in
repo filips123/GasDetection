@@ -1,0 +1,9 @@
+# Package Details
+include README.rst
+include LICENSE
+
+# Package Example
+include example.py
+
+# Package Code
+graft gas_detection
