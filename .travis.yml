@@ -1,0 +1,29 @@
+language: python
+
+python:
+  - 3.3
+  - 3.4
+  - 3.5
+  - 3.6
+  - 3.7
+
+cache: pip
+
+before_install:
+  - travis_retry pip install pypandoc pylint
+
+install:
+  - travis_retry pip install -e .
+
+script:
+  - pylint gas_detection
+  - pylint example.py
+
+deploy:
+  provider: pypi
+  skip_cleanup: true
+  skip_existing: true
+  on:
+    tags: true
+  user: $PYPI_USER
+  password: $PYPI_PASSWORD
