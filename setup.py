@@ -26,6 +26,8 @@ setup(
         'lint': ['pylint'],
     },
 
+    python_requires = '>= 3.4',
+
     author = 'Filip Š',
     author_email = 'projects@filips.si',
     url = 'https://github.com/filips123/GasDetection/',
