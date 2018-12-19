@@ -10,7 +10,7 @@ python:
 cache: pip
 
 before_install:
-  - travis_retry pip install pypandoc pylint
+  - travis_retry pip install pylint
 
 install:
   - travis_retry pip install -e .

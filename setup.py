@@ -1,19 +1,7 @@
 from setuptools import setup
 
 def readme():
-    try:
-        from pypandoc.pandoc_download import download_pandoc
-        download_pandoc()
-        print()
-
-        import pypandoc
-        return pypandoc.convert_file('README.md', 'rst')
-
-    except (ImportError, IOError, OSError, Exception) as e:
-        print(e)
-        print()
-
-        with open('README.md') as f:
+    with open('README.md') as f:
             return f.read()
 
 setup(
@@ -21,6 +9,7 @@ setup(
     version = '1.0.0',
     description = 'Gas detection for Raspberry Pi using ADS1x15 and MQ-2 sensors',
     long_description = readme(),
+    long_description_content_type='text/markdown',
     license = 'GPLv3+',
 
     packages = ['gas_detection'],
@@ -34,7 +23,6 @@ setup(
     ],
 
     extras_require = {
-        'pandoc': ['pypandoc'],
         'lint': ['pylint'],
     },
 
