@@ -6,11 +6,13 @@ def readme():
 
 setup(
     name = 'gas-detection',
-    version = '1.0.0',
     description = 'Gas detection for Raspberry Pi using ADS1x15 and MQ-2 sensors',
     long_description = readme(),
     long_description_content_type='text/markdown',
     license = 'GPLv3+',
+
+    version_format='{tag}',
+    setup_requires=['setuptools-git-version'],
 
     packages = ['gas_detection'],
 
