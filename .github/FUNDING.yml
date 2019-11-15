@@ -1,0 +1,11 @@
+# Supported funding model platforms
+
+github:
+tidelift: pypi/gas-detection
+
+open_collective: filips123
+patreon: filips
+ko_fi: filips
+liberapay: filips
+
+custom: ['https://donorbox.org/filips', 'https://buymeacoff.ee/filips', 'https://beerpay.io/filips123', 'https://tippin.me/@123filips123']
